@@ -9,12 +9,10 @@
 > * [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 > * [Azure account](https://azure.microsoft.com/en-us/get-started/azure-portal)
 
-## Option 1
+## global
 
 > [!NOTE]
-> The example below demonstrates the simplest way to create a virtual machine along with all the necessary components for connectivity. Additionally, a web server is automatically installed to show how extra packages can be provisioned during the VM creation process.
-
-![screenshot](images/option-1.drawio.png)
+> The global section defines settings shared across all environments. It aims to set up core infrastructure, like Azure storage containers, to host Terraform tfstate files.
 
 ## Installation
 
@@ -23,7 +21,7 @@
 ---
 The first thing you need to do is navigate to the directory containing your Terraform scripts.
 ```
-cd IaC-demo-education/option-1
+cd IaC-demo-education/global
 ```
 ---
 $${\color{red}terraform \space init}$$ is the command used to initialize a working directory containing Terraform configuration files. It is the foundation of the Terraform workflow and must be run before any other commands, such as plan or apply, can be executed
