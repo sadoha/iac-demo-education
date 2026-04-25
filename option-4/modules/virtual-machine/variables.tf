@@ -41,7 +41,7 @@ variable "username" {
 
 variable "virtual_machine_size" {
   type        = string
-  default     = "Standard_B2s"
+  default     = "Standard_B1ls"
   description = "Size or SKU of the Virtual Machine"
 }
 

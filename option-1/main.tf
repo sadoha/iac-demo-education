@@ -132,6 +132,12 @@ resource "azurerm_linux_virtual_machine" "example" {
   }
 }
 
+# Delay before running the next step
+resource "time_sleep" "example" {
+  depends_on = [azurerm_linux_virtual_machine.example]
+  create_duration = "90s"
+}
+
 # Enable virtual machine extension and install Nginx
 resource "azurerm_virtual_machine_extension" "example" {
   name                  = "cs-nginx-${var.env_prefix}-${var.env_name}"
@@ -140,7 +146,7 @@ resource "azurerm_virtual_machine_extension" "example" {
   type                  = "CustomScript"
   type_handler_version  = "2.0"
   tags                  = local.all_tags
-  depends_on            = [azurerm_linux_virtual_machine.example]
+  depends_on            = [azurerm_linux_virtual_machine.example, time_sleep.example]
 
   settings = <<SETTINGS
 {

@@ -6,7 +6,7 @@ variable "resource_group_location" {
 
 variable "env_name" {
   type          = string
-  default       = "dev-01"
+  default       = "global"
   description   = "The name of the environment"
 }
 
@@ -16,22 +16,10 @@ variable "env_prefix" {
   description   = "The environment prefix"
 }
 
-variable "username" {
-  type          = string
-  description   = "The username for the local account that will be created on the new VM"
-  default       = "azureadmin"
-}
-
-variable "virtual_machine_size" {
-  type        = string
-  default     = "Standard_B1ls"
-  description = "Size or SKU of the Virtual Machine"
-}
-
-variable "redundancy_type" {
-  type        = string
-  default     = "Standard_LRS"
-  description = "Storage redundancy type of the OS disk"
+variable "storage_containers" {
+  type        = list(string)
+  default     = ["dev", "test", "prod"]
+  description = "The name of storage containers"
 }
 
 variable "extra_tags" {
