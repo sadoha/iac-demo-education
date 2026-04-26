@@ -18,7 +18,7 @@ variable "env_prefix" {
 
 variable "instances_count" {
   type          = number
-  default       = 1
+  default       = 4
   description   = "The number of Virtual Machines required"
 }
 
