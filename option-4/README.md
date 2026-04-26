@@ -83,7 +83,7 @@
 > │       ├── README.md
 > │       └── variables.tf
 > └── README.md
-```
+>```
 
 ![screenshot](images/option-4.drawio.png)
 
@@ -94,7 +94,11 @@
 ---
 The first thing you need to do is navigate to the directory containing your Terraform scripts.
 ```
-cd IaC-demo-education/option-3
+cd iac-demo-education/option-4/environments/dev
+or
+cd iac-demo-education/option-4/environments/test
+or
+cd iac-demo-education/option-4/environments/prod
 ```
 ---
 $${\color{red}terraform \space init}$$ is the command used to initialize a working directory containing Terraform configuration files. It is the foundation of the Terraform workflow and must be run before any other commands, such as plan or apply, can be executed
