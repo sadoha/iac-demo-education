@@ -18,7 +18,7 @@ variable "env_prefix" {
 
 variable "instances_count" {
   type          = number
-  default       = 2
+  default       = 1
   description   = "The number of Virtual Machines required"
 }
 
@@ -39,6 +39,7 @@ locals {
   common_tags = {
     Environment = var.env_name
     Project     = var.env_prefix
+    Location    = var.resource_group_location
     ManagedBy   = "Terraform"
     Reason      = "Education" 
   }

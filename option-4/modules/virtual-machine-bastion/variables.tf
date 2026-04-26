@@ -50,3 +50,9 @@ variable "redundancy_type" {
   default     = "Standard_LRS"
   description = "Storage redundancy type of the OS disk"
 }
+
+variable "create_public_ip" {
+  type        = bool
+  default     = true
+  description = "Create the public ip if it exists, else null"
+}

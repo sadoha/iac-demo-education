@@ -1,3 +1,4 @@
 output "connection_string_to_web" {
-  value = "http://${azurerm_public_ip.example.ip_address}"
+  description = "Define the URL to connect to LB from the internet"
+  value       = "http://${azurerm_public_ip.example.ip_address}"
 }

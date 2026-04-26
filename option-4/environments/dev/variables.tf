@@ -39,6 +39,7 @@ locals {
   common_tags = {
     Environment = var.env_name
     Project     = var.env_prefix
+    Location    = var.resource_group_location
     ManagedBy   = "Terraform"
     Reason      = "Education" 
   }

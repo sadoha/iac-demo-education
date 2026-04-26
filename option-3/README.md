@@ -9,7 +9,7 @@
 > * [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 > * [Azure account](https://azure.microsoft.com/en-us/get-started/azure-portal)
 
-## Option 1
+## Option 3
 
 > [!NOTE]
 > The third example differs slightly from the first two, as its purpose is to demonstrate how load balancing works and how to implement a fault-tolerant environment.

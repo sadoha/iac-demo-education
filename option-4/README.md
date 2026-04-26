@@ -1,9 +1,6 @@
 
 # Getting Started
 
-> [!NOTE]
-> Infrastructure as Code (IaC) is the management and provisioning of infrastructure (servers, networks, databases) through machine-readable definition files rather than manual configuration. By treating infrastructure setup like software code, it enables automated, repeatable, and consistent deployments, reducing environment drift and human error.
-
 > [!CAUTION]
 > In the example below, the suggested environments are provided for educational purposes only and must not be used in production.
 
@@ -11,27 +8,6 @@
 > Requirements
 > * [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 > * [Azure account](https://azure.microsoft.com/en-us/get-started/azure-portal)
-
-## Option 1
-
-> [!NOTE]
-> The example below demonstrates the simplest way to create a virtual machine along with all the necessary components for connectivity. Additionally, a web server is automatically installed to show how extra packages can be provisioned during the VM creation process.
-
-![screenshot](option-1/images/option-1.drawio.png)
-
-## Option 2
-
-> [!NOTE]
-> The second example is very similar to the first, with the key difference being how the code is made more versatile. When you need to create multiple similar virtual machines, it is logical to use loops and reuse the same code. This example also demonstrates how to avoid code duplication.
-
-![screenshot](option-2/images/option-2.drawio.png)
-
-## Option 3
-
-> [!NOTE]
-> The third example differs slightly from the first two, as its purpose is to demonstrate how load balancing works and how to implement a fault-tolerant environment.
-
-![screenshot](option-3/images/option-3.drawio.png)
 
 ## Option 4
 
@@ -108,3 +84,32 @@
 > │       └── variables.tf
 > └── README.md
 ```
+
+![screenshot](images/option-4.drawio.png)
+
+## Installation
+
+> [!NOTE]
+> To deploy the environment, you need to run the commands listed below. However, make sure you have Terraform installed on your PC first.
+---
+The first thing you need to do is navigate to the directory containing your Terraform scripts.
+```
+cd IaC-demo-education/option-3
+```
+---
+$${\color{red}terraform \space init}$$ is the command used to initialize a working directory containing Terraform configuration files. It is the foundation of the Terraform workflow and must be run before any other commands, such as plan or apply, can be executed
+```
+terraform init
+```
+---
+$${\color{red}terraform \space plan}$$ is a primary command in the Terraform workflow that generates a speculative execution plan. It allows you to preview exactly what changes Terraform will make to your infrastructure before actually applying them. 
+```
+terraform plan
+```
+---
+$${\color{red}terraform \space apply}$$ is a fundamental Terraform CLI command used to execute the operations required to reach the desired state defined in your configuration files. It is the step in the Terraform workflow where infrastructure is actually created, modified, or destroy.
+```
+terraform apply
+```
+
+
