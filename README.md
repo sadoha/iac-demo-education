@@ -108,3 +108,4 @@
 > │       └── variables.tf
 > └── README.md
 ```
+![screenshot](option-4/images/option-4.drawio.png)
